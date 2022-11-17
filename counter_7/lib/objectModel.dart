@@ -8,17 +8,20 @@ class BudgetModel {
     required this.judul,
     required this.harga,
     required this.jenisTransaksi,
+
+    
+
     
   });
 
   static void addNewBudget({
-    required judul,harga,jenisTransaksi,
+    required judul,harga,jenisTransaksi
   }) {
     budgets.add(
       BudgetModel(
         judul: judul, 
         harga: harga, 
-        jenisTransaksi: jenisTransaksi
+        jenisTransaksi: jenisTransaksi,
         ));
   }
 

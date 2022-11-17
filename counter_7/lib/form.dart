@@ -135,10 +135,27 @@ class _MyFormPageState extends State<MyFormPage> {
                             }
                             return null;
                         },
-                    ),
-
-                    
                       ),
+                    ),
+                    // ListTile(
+                    //   title: Text(tanggal.toString()),
+                    //   // make tanggal to center
+                    //   trailing: const Icon(Icons.keyboard_arrow_down),
+                    //   onTap: () async {
+                    //     final DateTime? picked = await showDatePicker(
+                    //       context: context,
+                    //       initialDate: tanggal,
+                    //       firstDate: DateTime(2015, 8),
+                    //       lastDate: DateTime(2101),
+                    //     );
+                    //     if (picked != null && picked != tanggal) {
+                    //       setState(() {
+                    //         tanggal = picked;
+                    //       });
+                    //     }
+                    //   },
+                    // ),
+
                     DropdownButtonFormField(
                       value: _jenisTransaksi,
                       icon: const Icon(Icons.keyboard_arrow_down),

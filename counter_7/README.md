@@ -2,6 +2,7 @@
 
 A new Flutter project.
 
+# TUGAS 7
 ### Stateless Widget
 Merupaka sebuah widget statis yang tidak dapat diubah atau tidak akan pernah berubah. 
 
@@ -40,3 +41,4 @@ Perbedaan utama ada pada inialisasi nilai (pemberian nilai) dari variabelnya, `c
 * Membuat fungsi `_decrementCounter()` (kebalikan dari increment)
 * Membuat widget `FloatingActionButton()` baru untuk decrement counter
 
+# TUGAS 8

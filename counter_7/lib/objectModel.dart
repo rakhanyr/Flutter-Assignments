@@ -8,6 +8,7 @@ class BudgetModel {
     required this.judul,
     required this.harga,
     required this.jenisTransaksi,
+    
   });
 
   static void addNewBudget({

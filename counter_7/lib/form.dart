@@ -136,6 +136,8 @@ class _MyFormPageState extends State<MyFormPage> {
                             return null;
                         },
                     ),
+
+                    
                       ),
                     DropdownButtonFormField(
                       value: _jenisTransaksi,

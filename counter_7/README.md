@@ -25,10 +25,10 @@ onSaved: Event terjadi ketika user men-save input
 onPressed: Event terjadi ketika user menekan button
 onClick, onLongPress ,onHover, onFocusChange, onTap, dst
 
-##Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 Navigator menggunakan prinsip Stack, yaitu First in last out. Ketika ingin berpindah halaman, page yang sedang dilihat akan di pop pada stack, kemudian halaman yang akan dimuat akan di-push pada top of stack. Halaman yang ditampilkan ke user merupakan halaman yang berada pada top of stack.
 
-##Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
 Membuat file untuk layar form, data, dan model data
 Membuat drawer pada semua file yang dibutuhkan

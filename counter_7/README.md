@@ -2,8 +2,43 @@
 
 A new Flutter project.
 
+# TUGAS 8
+
+### Navigator.push
+Menambahkan Route ke top of stack dari Navigator. Hanya akan menambahkan page pada top of stack saja
+### Navigator.pushReplacement
+Nantinya akan merubah halaman sekarang dengan halaman baru dengan cara menghapus top of stack saat ini, lalu kemudian akan  menambahkan page yang dituju ke top of stack.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+TextFormField: field teks untuk input pengguna
+Form: container untuk melakukan grouping widget field form
+DropdownButtonFormField, menu dropdown atau hamburger menu
+Card: panel tempat informasi, nampilin card seperti container
+Drawer: widget yang berfungsi untuk membuat drawer di sisi kiri layar (untuk navigasi)
+TextButton: Menampilkan button dengan text
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+
+onChanged: Event terjadi ketika terdapat perubahan pada input
+onSaved: Event terjadi ketika user men-save input
+onPressed: Event terjadi ketika user menekan button
+onClick, onLongPress ,onHover, onFocusChange, onTap, dst
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator menggunakan prinsip Stack, yaitu First in last out. Ketika ingin berpindah halaman, page yang sedang dilihat akan di pop pada stack, kemudian halaman yang akan dimuat akan di-push pada top of stack. Halaman yang ditampilkan ke user merupakan halaman yang berada pada top of stack.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+Membuat file untuk layar form, data, dan model data
+Membuat drawer pada semua file yang dibutuhkan
+Membuat widget form pada form dart, lalu menyimpan input ke objek model yang telah dibuat 
+Lalu menampilkan data dalam bentuk widget card pada halaman Data Budget
+
+
+# TUGAS 7
 ### Stateless Widget
-Merupaka sebuah widget statis yang tidak dapat diubah atau tidak akan pernah berubah. 
+Merupakan sebuah widget statis yang tidak dapat diubah atau tidak akan pernah berubah. 
 
 ### Stateful Widget
 Adalah widget yang dinamis atau dapat berubah. Stateful widget dapat digunakan untuk mengupdate tampilan, merubah warna, menambah jumlah bariis, dll. 
@@ -39,4 +74,3 @@ Perbedaan utama ada pada inialisasi nilai (pemberian nilai) dari variabelnya, `c
 * Membuat condition if-else berdasarkan nilai `_counter` (genap dan ganjil)
 * Membuat fungsi `_decrementCounter()` (kebalikan dari increment)
 * Membuat widget `FloatingActionButton()` baru untuk decrement counter
-

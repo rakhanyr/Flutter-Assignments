@@ -1,3 +1,4 @@
+import 'package:counter_7/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/page/data.dart';
@@ -21,6 +22,8 @@ class _MyFormPageState extends State<MyFormPage> {
     List<String> _listJudul = [];
     List<int> _listHarga = [];
     List<String> _listJenis = [];
+    DateTime tanggal = DateTime.now();
+
 
     @override
     Widget build(BuildContext context) {
@@ -28,43 +31,8 @@ class _MyFormPageState extends State<MyFormPage> {
             appBar: AppBar(
                 title: Text('Form Budget'),
             ),
-            drawer: Drawer(
-            child: Column(
-              children: [
-                // Menambahkan clickable menu
-                ListTile(
-                  title: const Text('counter_7'),
-                  onTap: () {
-                    // Route menu ke halaman utama
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyHomePage(title: 'counter_7',)),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Tambah Budget'),
-                  onTap: () {
-                    // Route menu ke halaman form
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyFormPage()),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Data Budget'),
-                  onTap: () {
-                    // Route menu ke halaman form
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyDataPage()),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
+            drawer: const DrawerApp(),
+
             body: Form(
               key: _formKey,
               child: SingleChildScrollView(
@@ -137,24 +105,24 @@ class _MyFormPageState extends State<MyFormPage> {
                         },
                       ),
                     ),
-                    // ListTile(
-                    //   title: Text(tanggal.toString()),
-                    //   // make tanggal to center
-                    //   trailing: const Icon(Icons.keyboard_arrow_down),
-                    //   onTap: () async {
-                    //     final DateTime? picked = await showDatePicker(
-                    //       context: context,
-                    //       initialDate: tanggal,
-                    //       firstDate: DateTime(2015, 8),
-                    //       lastDate: DateTime(2101),
-                    //     );
-                    //     if (picked != null && picked != tanggal) {
-                    //       setState(() {
-                    //         tanggal = picked;
-                    //       });
-                    //     }
-                    //   },
-                    // ),
+                    ListTile(
+                      title: Text(tanggal.toString()),
+                      // make tanggal to center
+                      trailing: const Icon(Icons.keyboard_arrow_down),
+                      onTap: () async {
+                        final DateTime? picked = await showDatePicker(
+                          context: context,
+                          initialDate: tanggal,
+                          firstDate: DateTime(2015, 8),
+                          lastDate: DateTime(2101),
+                        );
+                        if (picked != null && picked != tanggal) {
+                          setState(() {
+                            tanggal = picked;
+                          });
+                        }
+                      },
+                    ),
 
                     DropdownButtonFormField(
                       value: _jenisTransaksi,
@@ -192,6 +160,7 @@ class _MyFormPageState extends State<MyFormPage> {
                             judul: _judul,
                             harga: _harga,
                             jenisTransaksi: _jenisTransaksi,
+                            tanggal: tanggal,
                         );
                         Navigator.pushReplacement(
                           context,

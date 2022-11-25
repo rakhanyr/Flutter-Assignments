@@ -1,3 +1,4 @@
+import 'package:counter_7/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/page/form.dart';
 import 'package:counter_7/main.dart';
@@ -17,48 +18,13 @@ class _MyDataPageState extends State<MyDataPage> {
             appBar: AppBar(
                 title: Text('Data Budget'),
             ),
-            drawer: Drawer(
-            child: Column(
-              children: [
-                // Menambahkan clickable menu
-                ListTile(
-                  title: const Text('counter_7'),
-                  onTap: () {
-                    // Route menu ke halaman utama
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyHomePage(title: 'counter_7',)),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Tambah Budget'),
-                  onTap: () {
-                    // Route menu ke halaman form
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyFormPage()),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: const Text('Data Budget'),
-                  onTap: () {
-                    // Route menu ke halaman form
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyDataPage()),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
+            drawer: const DrawerApp(),
+
             body: ListView.builder(
               itemBuilder: (context,index) {
                 return Card(
                   child: Container(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -75,15 +41,24 @@ class _MyDataPageState extends State<MyDataPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
+                            BudgetModel.budgets[index].jenisTransaksi,
+                            style: const TextStyle(fontSize: 14),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
                             BudgetModel.budgets[index].harga.toString(),
                             style: const TextStyle(fontSize: 12),
                           ),
                           Text(
-                            BudgetModel.budgets[index].jenisTransaksi,
-                            style: const TextStyle(fontSize: 12),
-                          ),
+                          BudgetModel.budgets[index].tanggal.toString(),
+                          style: const TextStyle(fontSize: 12, color: Colors.black),
+                        )
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),              

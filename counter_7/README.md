@@ -2,6 +2,46 @@
 
 A new Flutter project.
 
+# TUGAS 9
+
+### Navigator.push
+Menambahkan Route ke top of stack dari Navigator. Hanya akan menambahkan page pada top of stack saja
+### Navigator.pushReplacement
+Nantinya akan merubah halaman sekarang dengan halaman baru dengan cara menghapus top of stack saat ini, lalu kemudian akan  menambahkan page yang dituju ke top of stack.
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Ya, kita bisa mengambil dan menggunakan JSON tanpa harus membuat modelnya terlebih dahulu. Namun, cara tersebut tidak direkomendasikan karena akan lebih baik menggunakan data yang sudah di-parse ke model dibandingkan dengan menggunakan raw JSON. Penggunaan model akan membuat lebih rapi dan terstruktur.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+TextFormField: field teks untuk input pengguna
+Form: container untuk melakukan grouping widget field form
+DropdownButtonFormField, menu dropdown atau hamburger menu
+Drawer: widget yang berfungsi untuk membuat drawer di sisi kiri layar (untuk navigasi)
+TextButton: Menampilkan button dengan text
+ListView.builder: berfungsi untuk menampilkan list of children yang scrollable. 
+Checkbox = Membuat checkbox dengan event onChange, akan berubah setiap value watchednya berubah.
+
+
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+Fetch data dari API endpoint.
+Data yang didapat di-decode menjadi bentuk JSON.
+Data dalam bentuk JSON di-convert menjadi bentuk model.
+Data dalam bentuk model dapat digunakan pada aplikasi Flutter.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+Membuat model mywatchlist.
+Memodifikasi widget drawer.
+Membuat page mywatchlist untuk menampilkan seluruh list mywatch.
+Membuat page detail mywatchlist.
+Menggunakan data mywatchlist pada aplikasi Flutter.
+
+
+
 # TUGAS 8
 
 ### Navigator.push
